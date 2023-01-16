@@ -63,8 +63,17 @@
 </ul>
       
       <footer class="site-footer">
-        <span class="site-footer-credits">&copy; <a href="https://sxbug.com">神仙Bug</a></span>
+        <span class="site-footer-credits">&copy; <span id="copyrightYear"></span> <a href="https://sxbug.com">神仙Bug</a></span>
       </footer>
     </main>
+    
+    <script>
+    (function () {
+        var copyrightYear = document.querySelector("#copyrightYear");
+		var currentYear = (new Date()).getFullYear();
+		copyrightYear.innerText = currentYear;
+    })();
+</script>
+    
   </body>
 </html>
